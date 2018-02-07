@@ -2,6 +2,17 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
 h1 {
   font-family: 'Great Vibes', cursive;
   text-align: center;
@@ -9,15 +20,48 @@ h1 {
 }
 
 nav {
-/*  margin: 4em 0em 2em 0em;
-*/  background-color: black;
+  background-color: black;
   height: 3em;
 }
 
 nav a {
   text-decoration: none;
-  margin: 0em 3em 0em 10.5em;
+  display: inline-block;
+  float: left;
+  margin: 0em 3em 0em 9.5em;
   text-align: center;
   color: white;
-  padding-top: 3em;
+  padding: 0.8em;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+#me {
+  height: 30em;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 15em 0em 0em 0em;
+  background-color:
+}
+
+.flex {
+  flex: 1;
+  display: flex;
+}
+
+.col-1 {
+  order: 1;
+  flex: 2;
+  margin-right: 5em;
+  background-color:
+}
+
+.col-2 {
+  order: 2;
+  flex: 2;
 }
