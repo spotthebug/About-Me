@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: 'Great Vibes', cursive;
+  text-align: center;
+  font-size: 3em;
+}
+
+nav {
+/*  margin: 4em 0em 2em 0em;
+*/  background-color: black;
+  height: 3em;
+}
+
+nav a {
+  text-decoration: none;
+  margin: 0em 3em 0em 10.5em;
+  text-align: center;
+  color: white;
+  padding-top: 3em;
+}
