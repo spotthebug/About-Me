@@ -1,0 +1,95 @@
+
+h2 {
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.2em;
+  margin-top: 8.9em;
+  margin-bottom: 2em;
+  letter-spacing: 0.2em;
+}
+
+main {
+  margin-right: 10em;
+  margin-left: 10em;
+}
+
+fieldset {
+  border: 0.063em solid white;
+}
+
+fieldset input {
+  border: 0.125em solid #1a1a1a;
+}
+
+#contact-full-name {
+  padding: 1em;
+  width: 100%;
+  margin-bottom: 0.75em;
+}
+
+#contact-email {
+  padding: 1em;
+  width: 100%;
+  margin-bottom: 0.75em;
+}
+
+#contact-subject {
+  padding: 1em;
+  width: 100%;
+  margin-bottom: 0.75em;
+}
+
+#contact-message {
+  padding: 1em;
+  height: 10em;
+  width: 100%;
+  margin-bottom: 0.75em;
+}
+
+#button-submit {
+  padding: 0.5em;
+  border: 0.125em solid #1a1a1a;
+  color: #1a1a1a;
+  text-align: center;
+  width: 100%;
+  transition: all 1s;
+  -webkit-transition: all 1s;
+  font-family: 'Abel', sans-serif;
+  letter-spacing: 0.1em;
+  font-size: 0.8em;
+}
+
+#button-submit:hover {
+  background-color: #595959;
+  color: white;
+}
+
+.error-hide {
+  display: none;
+}
+
+.message-display {
+  color: #1a1a1a;
+  font-family: 'Abel', sans-serif;
+}
+
+.error {
+  border: 2px solid #ED5254;
+}
+
+.valid {
+  border: 2px solid green;
+}
+
+.form-submitted {
+  border: 0.125em solid #1a1a1a;
+}
+
+#thank-you {
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.2em;
+  margin-top: 10em;
+  margin-bottom: 6em;
+  letter-spacing: 0.2em;
+}
