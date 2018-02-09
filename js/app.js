@@ -81,10 +81,10 @@ $(document).ready(function() {
   jQuery(function($) {
 
   // settings
-  var $slider = $('.slider'); // class or id of carousel slider
-  var $slide = 'li'; // could also use 'img' if you're not using a ul
-  var $transition_time = 500; // 1 second
-  var $time_between_slides = 3000; // 4 seconds
+  var $slider = $('.slider');
+  var $slide = 'li';
+  var $transition_time = 500;
+  var $time_between_slides = 3000;
 
   function slides(){
     return $slider.find($slide);
