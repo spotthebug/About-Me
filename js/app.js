@@ -74,11 +74,8 @@ $(document).ready(function() {
     $('form')[0].reset();
   });
 
-  // $(.slides).each(function() {
-  //   $(this).removeClass('slides').addClass('slides-show');
-  // })
 
-  jQuery(function($) {
+  $(function() {
 
   // settings
   var $slider = $('.slider');
@@ -110,6 +107,41 @@ $(document).ready(function() {
       slides().eq($i + 1).addClass('active');
     }
     , $transition_time +  $time_between_slides
+  );
+
+});
+
+  $(function() {
+
+  // settings
+  var $testimonial = $('#testimonials');
+  var $eachTestimonial = 'p';
+  var $transitionTime = 500;
+  var $timeBetween = 2000;
+
+  function testimonials(){
+    return $testimonial.find($eachTestimonial);
+  }
+
+  testimonials().fadeOut();
+
+  // set active classes
+  testimonials().first().addClass('active');
+  testimonials().first().fadeIn($transitionTime);
+
+  // auto scroll
+  $interval = setInterval(
+    function(){
+      var $i = $testimonial.find($eachTestimonial + '.active').index();
+      testimonials().eq($i).removeClass('active');
+      testimonials().eq($i).fadeOut($transitionTime);
+
+      if (testimonials().length == $i + 1) $i = -1; // loop to start
+
+      testimonials().eq($i + 1).fadeIn($transitionTime);
+      testimonials().eq($i + 1).addClass('active');
+    }
+    , $transitionTime +  $timeBetween
   );
 
 });
