@@ -2,8 +2,8 @@
 h2 {
   text-align: center;
   font-family: 'Great Vibes', cursive;
-  font-size: 2em;
-  margin-top: 0;
+  font-size: 2.2em;
+  margin-top: 8.9em;
   margin-bottom: 2em;
   letter-spacing: 0.2em;
 }
@@ -16,7 +16,7 @@ h2 {
 #wrapper {
   display: flex;
   flex-direction: column;
-  margin: 17em 5em 0em 5em;
+  margin: 0em 5em 0em 5em;
 }
 
 .flex {
