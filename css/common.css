@@ -11,15 +11,16 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  height: 15.2em;
-  margin-top: 0;
+  height: 16em;
+  margin: auto;
   background-image: url("../assets/Love-Coding.gif");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
+  object-fit: cover;
+  z-index: 100;
+/*  background-repeat: no-repeat;
+*/}
 
 h1 {
-  margin-top: 0.5em;
+  margin-top: 0.67em;
   position: relative;
   font-family: 'Great Vibes', cursive;
   text-align: center;
@@ -40,15 +41,25 @@ nav a {
   text-decoration: none;
   display: inline-block;
   float: left;
-  margin: 0em 3em 0em 6.7em;
+  margin: 0em 3em 0em 4.6em;
   text-align: center;
   color: #1a1a1a;
   padding: 0.8em;
   font-family: 'Abel', sans-serif;
+  font-size: 1.2em;
 }
 
 nav a:hover {
   text-decoration: underline;
+}
+
+h2 {
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.2em;
+  margin-top: 8.9em;
+  margin-bottom: 1.5em;
+  letter-spacing: 0.2em;
 }
 
 footer {
@@ -58,9 +69,11 @@ footer {
   text-align: center;
   font-family: 'Abel', sans-serif;
   background-image: url("../assets/Love-Coding.gif");
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: white;
+    object-fit: cover;
+  z-index: 100;
+
+/*  background-repeat: no-repeat;
+*/  color: white;
 }
 
 i {

@@ -94,9 +94,10 @@ $(document).ready(function() {
   slides().first().fadeIn($transition_time);
 
   // auto scroll
-  $interval = setInterval(
+  setInterval(
     function(){
       var $i = $slider.find($slide + '.active').index();
+      console.log($i);
 
       slides().eq($i).removeClass('active');
       slides().eq($i).fadeOut($transition_time);
