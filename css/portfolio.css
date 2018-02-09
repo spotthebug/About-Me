@@ -4,21 +4,76 @@ h2 {
   font-family: 'Great Vibes', cursive;
   font-size: 2.2em;
   margin-top: 8.9em;
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
   letter-spacing: 0.2em;
 }
 
 .image-sizing {
+  width: 15em;
+  height: 10em;
+  border: 0.1em solid #1a1a1a;
+}
 
+.image-size {
+  width: 100%;
+  height: 30em;
 }
 
 #wrapper {
   display: flex;
   flex-direction: column;
-  margin: 0em 5em 0em 5em;
+  margin: 4em 5em 0em 14em;
 }
 
 .flex {
   flex: 1;
   display: flex;
+}
+
+#column-1 {
+  order: 1;
+  flex: 2;
+}
+
+#column-2 {
+  order: 2;
+  flex: 2;
+}
+
+.button {
+  text-transform: capitalize;
+  padding: 0.6em 1.3em;
+  text-align: center;
+  border: 1px solid #1a1a1a;
+  background-color: #1a1a1a;
+  font-size: 0.8em;
+  transition: all 1s;
+  -webkit-transition: all 1s;
+  font-family: 'Abel', sans-serif;
+  margin: 2em 3em 2em 8.7em;
+}
+
+button a {
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.button:hover {
+  background-color: #fff;
+}
+
+button a:hover {
+  color: #1a1a1a;
+}
+
+.slider {
+  margin: 0em 8em 0em 13.6em;
+  width: 50em; /* Update to your slider width */
+  height: 30em; /* Update to your slider height */
+  overflow: hidden;
+}
+
+.slider li {
+  display: none;
 }
