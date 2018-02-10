@@ -80,8 +80,8 @@ $(document).ready(function() {
   // settings
   var $slider = $('.slider');
   var $slide = 'li';
-  var $transition_time = 500;
-  var $time_between_slides = 3000;
+  var $transitionTime = 1500;
+  var $timeBetweenSlides = 3000;
 
   function slides(){
     return $slider.find($slide);
@@ -91,23 +91,22 @@ $(document).ready(function() {
 
   // set active classes
   slides().first().addClass('active');
-  slides().first().fadeIn($transition_time);
+  slides().first().fadeIn($transitionTime);
 
   // auto scroll
   setInterval(
     function(){
       var $i = $slider.find($slide + '.active').index();
-      console.log($i);
 
       slides().eq($i).removeClass('active');
-      slides().eq($i).fadeOut($transition_time);
+      slides().eq($i).fadeOut($transitionTime);
 
       if (slides().length == $i + 1) $i = -1; // loop to start
 
-      slides().eq($i + 1).fadeIn($transition_time);
+      slides().eq($i + 1).fadeIn($transitionTime);
       slides().eq($i + 1).addClass('active');
     }
-    , $transition_time +  $time_between_slides
+    , $transitionTime +  $timeBetweenSlides
   );
 
 });
