@@ -21,3 +21,5 @@ Work in Progress
 - CSS
 - Javascript
 - JQuery
+
+### All the pages are web-responsive
