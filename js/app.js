@@ -80,7 +80,7 @@ $(document).ready(function() {
   // settings
   var $slider = $('.slider');
   var $slide = 'li';
-  var $transitionTime = 1500;
+  var $transitionTime = 1000;
   var $timeBetweenSlides = 3000;
 
   function slides(){
@@ -101,7 +101,8 @@ $(document).ready(function() {
       slides().eq($i).removeClass('active');
       slides().eq($i).fadeOut($transitionTime);
 
-      if (slides().length == $i + 1) $i = -1; // loop to start
+      if (slides().length == $i + 1)
+      $i = -1; // loop to start
 
       slides().eq($i + 1).fadeIn($transitionTime);
       slides().eq($i + 1).addClass('active');
@@ -116,8 +117,8 @@ $(document).ready(function() {
   // settings
   var $testimonial = $('#testimonials');
   var $eachTestimonial = 'p';
-  var $transitionTime = 500;
-  var $timeBetween = 2000;
+  var $transitionTime = 1000;
+  var $timeBetween = 3500;
 
   function testimonials(){
     return $testimonial.find($eachTestimonial);
@@ -145,6 +146,11 @@ $(document).ready(function() {
   );
 
 });
+
+  // $('.hamburger').on('click', function() {
+  //   $('.responsive-menu').(addClass('expand');
+  //   $(this).addClass('btn-none');
+  // })
 
 });
 

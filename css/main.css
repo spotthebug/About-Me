@@ -1,7 +1,7 @@
 
 #me {
-  height: 18em;
-  border-radius: 2%;
+  height: 20em;
+  border-radius: 5%;
 }
 
 #wrapper {
@@ -44,7 +44,104 @@
   margin-top: 2em;
 }
 
-
 #testimonials p {
   display: none;
 }
+
+@media only screen and (max-width: 900px) {
+
+  #me {
+    width: 20%;
+  }
+
+  #wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0em 4em;
+}
+
+.flex {
+  flex: 1;
+  display: flex;
+}
+
+.col-1 {
+  flex: 2;
+}
+
+.col-2 {
+  flex: 2;
+}
+
+#testimonials {
+    margin: 4em;
+  }
+
+}
+
+@media only screen and (max-width: 800px) {
+
+  #me {
+    width: 100%;
+  }
+
+  #wrapper {
+    margin: 0em 4em 0em 4em;
+    display: block;
+  }
+
+  .flex {
+    display: block;
+  }
+
+  .col-1 {
+    display: block;
+  }
+
+  .col-2 p {
+    margin-top: 2em;
+    width: 100%;
+    display: block;
+    text-align: justify;
+  }
+
+  #testimonials {
+    margin: 4em;
+  }
+
+}
+
+
+@media only screen and (max-width: 599px) {
+
+  #me {
+    height: 15em;
+  }
+
+
+  #wrapper {
+    display: block;
+    margin: 1em;
+  }
+
+  .flex {
+    display: block;
+  }
+
+  .col-1 {
+    display: block;
+  }
+
+  .col-2 p {
+    display: block;
+    text-align: justify;
+  }
+
+  #testimonials {
+    margin: 1em;
+  }
+
+}
+
+
+

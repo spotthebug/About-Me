@@ -84,3 +84,19 @@ fieldset input {
   margin-bottom: 6em;
   letter-spacing: 0.2em;
 }
+
+@media only screen and (max-width: 599px) {
+
+  main {
+    margin: 0em 2em;
+  }
+
+}
+
+@media only screen and (max-width: 800px) {
+
+  main {
+    margin: 0em 5em;
+  }
+
+}

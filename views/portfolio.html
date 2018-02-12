@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="icon" type="image/ico" href="../assets/favicon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Alex+Brush:400,600,700|Damion:400,600,700|Great+Vibes:400,600,700|Kaushan+Script:400,600,700|Niconne:400,600,700|Tangerine:400,600,700|Lato:400,600,700|Raleway:400,600,700|Abel:400,600,700" rel="stylesheet">
@@ -14,31 +14,47 @@
 </head>
 <body>
   <header>
+    <!-- Hamburger for responsive design -->
     <h1>Garima Jain</h1>
-    <nav>
-      <a href="../index.html">About</a>
-      <a href="portfolio.html">Portfolio</a>
+    <nav class="menu">
+      <a href="#about">About</a>
+      <a href="views/portfolio.html">Portfolio</a>
       <a href="#">Code Laboratory</a>
-      <a href="../index.html">Testimonials</a>
-      <a href="contact.html">Contact</a>
+      <a href="views/contact.html">Contact</a>
+      <a href="#testimonial">Testimonials</a>
     </nav>
+
+  <div>
+    <span class="hamburger"><i class="fa fa-bars" aria-hidden="true"></i>
+    </span>
+    <nav class="responsive-menu">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="views/portfolio.html">Portfolio</a></li>
+        <li><a href="#">Code Laboratory</a></li>
+        <li><a href="views/contact.html">Contact</a></li>
+        <li><a href="#testimonial">Testimonials</a></li>
+      </ul>
+    </nav>
+  </div>
   </header>
+
   <h2>portfolio</h2>
 
   <main id="wrapper" class="flex">
 
     <div id="column-1">
       <ul class="slider">
-        <li class="list">
+        <li>
           <img class="image-size" src="../assets/monumenthome.png">
         </li>
-        <li class="list">
+        <li>
           <img class="image-size" src="../assets/GarimasBoutiqueDress.png">
         </li>
-        <li class="list">
+        <li>
           <img class="image-size" src="../assets/About-Me-HomePage.png">
         </li>
-        <li class="list">
+        <li>
           <img class="image-size" src="../assets/HarevsTortoise.png">
         </li>
       </ul>
