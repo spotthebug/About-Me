@@ -18,19 +18,24 @@ $(document).ready(function() {
     var input = $(this);
     var emailInputValidator = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     // test is a method used to match strings
-    var is_email = emailInputValidator.test(input.val());
-    if (is_email) {
-      input.removeClass("error").addClass("valid");
+    var isValid = emailInputValidator.test(input.val());
+    
+    // Nicely done, but consider this:
+    // You only needed a single class, 'valid'. Any element without this class can be assumed to be invalid.
+    // Same for the events below this one!
+    if (isValid) {
+      input.addClass("valid");
     }
     else {
-      input.removeClass("valid").addClass("error");
+      input.removeClass("valid");
     }
   });
 
   $('#contact-subject').on('input', function() {
     var input = $(this);
-    var is_subject = input.val();
-    if (is_subject) {
+    // Remember to use camelCase in javascript
+    var isValid = input.val();
+    if (isValid) {
       input.removeClass("error").addClass("valid");
     }
     else {
@@ -58,6 +63,10 @@ $(document).ready(function() {
       }
       else {
         event.preventDefault();
+        // Suggestion: Display the error message for each invalid input here
+        // In this way, you don't have to manage the valid/error classes
+        // A valid field will say so and the rest need to show the error message
+        $('span.error-hide').show();
       }
       $(this).hide();
       $('.contact-header').addClass('error-hide');
@@ -74,8 +83,9 @@ $(document).ready(function() {
     $('form')[0].reset();
   });
 
-
-  $(function() {
+  // If you can tell me how this function below works then you won't need to provide a link
+  // to where you saw it used.
+  // $(function() {
 
   // settings
   var $slider = $('.slider');
@@ -94,6 +104,8 @@ $(document).ready(function() {
   slides().first().fadeIn($transitionTime);
 
   // auto scroll
+  // May be easier to use setTimeout() instead:
+  // https://www.w3schools.com/w3css/w3css_slideshow.asp
   setInterval(
     function(){
       var $i = $slider.find($slide + '.active').index();
@@ -110,9 +122,9 @@ $(document).ready(function() {
     , $transitionTime +  $timeBetweenSlides
   );
 
-});
+// });
 
-  $(function() {
+$(function() {
 
   // settings
   var $testimonial = $('#testimonials');
@@ -131,6 +143,9 @@ $(document).ready(function() {
   testimonials().first().fadeIn($transitionTime);
 
   // auto scroll
+  // Same code can be used for the portfolio carousel!
+  // Your transitions are overlapping due to the the timing of the intervals.
+  // Another case where setTimeout() might be a good approach.
   $interval = setInterval(
     function(){
       var $i = $testimonial.find($eachTestimonial + '.active').index();
@@ -147,10 +162,11 @@ $(document).ready(function() {
 
 });
 
-  // $('.hamburger').on('click', function() {
-  //   $('.responsive-menu').(addClass('expand');
-  //   $(this).addClass('btn-none');
-  // })
+  $('.hamburger').on('click', function() {
+    // Typo! And an unnecessary class btn-none
+    $('.responsive-menu').toggle('expand');
+    // Now you can fix the spacing and positioning of the menu when it appears :D
+  })
 
 });
 
